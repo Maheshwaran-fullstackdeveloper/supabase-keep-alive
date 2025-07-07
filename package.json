@@ -1,0 +1,16 @@
+{
+  "name": "supabase-keep-alive",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@vercel/node": "^5.3.4",
+    "typescript": "^5.4.5"
+  }
+}
