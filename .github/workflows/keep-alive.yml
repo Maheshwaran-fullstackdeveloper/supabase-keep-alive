@@ -1,0 +1,17 @@
+name: Supabase Keep-Alive
+
+on:
+  schedule:
+    - cron: '0 3 * * *' # Runs every day at 8:30 AM IST (3:00 UTC)
+  workflow_dispatch: # Optional: allows manual trigger
+
+jobs:
+  ping-vercel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Vercel Keep-Alive Endpoint
+        run: |
+          echo "Pinging: $KEEP_ALIVE_URL"
+          curl -i "$KEEP_ALIVE_URL"
+    env:
+      KEEP_ALIVE_URL: ${{ secrets.KEEP_ALIVE_URL }}
