@@ -38,7 +38,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(401).json({ status: "unauthorized" });
   }
 
-  const { data, error } = await supabase.from("languages").select().limit(1);
+  const { data, error } = await supabase.from('cabins').select().limit(1);
 
   if (error) {
     await sendSlackMessage("❌ Call to database failed");
