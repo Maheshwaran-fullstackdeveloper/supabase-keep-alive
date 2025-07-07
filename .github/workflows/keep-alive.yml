@@ -2,8 +2,8 @@ name: Supabase Keep-Alive
 
 on:
   schedule:
-    - cron: '0 3 * * *' # Runs every day at 8:30 AM IST (3:00 UTC)
-  workflow_dispatch: # Optional: allows manual trigger
+    - cron: "0 3 * * *" # 8:30 AM IST
+  workflow_dispatch:
 
 jobs:
   ping-vercel:
